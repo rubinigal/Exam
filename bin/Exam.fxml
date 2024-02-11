@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExamController">
+   <children>
+      <Text fx:id="questionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="250.0" spacing="50.0">
+               <children>
+                  <RadioButton fx:id="answer1" mnemonicParsing="false" text="RadioButton">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="answer2" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroup" />
+                  <RadioButton fx:id="answer3" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroup" />
+                  <RadioButton fx:id="answer4" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroup" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+            <Text fx:id="answerText" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Button fx:id="button" mnemonicParsing="false" onAction="#buttonPress" text="Answer" />
+   </children>
+</VBox>
